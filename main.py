@@ -1,14 +1,17 @@
 from tkinter import *
 
+# Creates tkinter window
 mile = Tk()
 mile.title("Mile to Kilometer calculator")
 mile.minsize(width = 300, height = 300)
 mile.config(padx = 20, pady = 20)
 
+# Creates tkinter label
 mile_label = Label(text = "Is equal to", font = ("Arial", 15, "italic"))
 mile_label.grid(column = 0, row = 1)
 mile_label.config(padx = 10, pady = 10)
 
+#Creates entry
 mile_entry = Entry(width = 8)
 mile_entry.get()
 mile_entry.grid(column = 1, row = 0)
@@ -16,12 +19,12 @@ mile_entry.grid(column = 1, row = 0)
 mile_label2 = Label(text = "  ")
 mile_label2.grid(column = 1, row = 1)
 
-
+# Function for number conversion
 def calculate():
     mile = float(mile_entry.get())
     km = mile * 1.60934
     mile_label2.config(text = f"{km}")
-mile_button = Button(text = "Calculate", height = 2, width = 7, command = calculate)
+mile_button = Button(text = "Calculate", height = 2, width = 7, command = calculate)   ### calculate function placed inside "Calculate" button
 mile_button.grid(column = 1, row = 3)
 mile_button.config(padx = 10, pady = 10)
 
